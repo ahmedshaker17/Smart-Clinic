@@ -29,7 +29,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this.commonService.setAppLng(lng);
     this.appLng = lng;
     this.layoutDirection = this.appLng === "ar" ? "rtl" : "ltr";
-    alert('app module lng ' + lng);
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();
