@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">{{ 'HEADER.HOME' | translate }}</a>
+    </div>
+
+    <div class="navbar-default">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active">
+          <a style="cursor: pointer;text-decoration:underline;color: blue" (click)="changeLng()">{{headerLng}}</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <ng-template #register [ngIf]="!authService.isAuthenticated()">
+          <li>
+            <a routerLink="/Register">{{ 'HEADER.REGISTER' | translate }}</a>
+          </li>
+          <li>
+            <a routerLink="/Login">{{ 'HEADER.LOGIN' | translate }}</a>
+          </li>
+        </ng-template>
+        <li *ngIf="authService.isAuthenticated()">
+          <a style="cursor: pointer" (click)="onLogut()">{{ 'HEADER.LOGOUT' | translate}}</a>
+        </li>
+
+        <li *ngIf="authService.isAuthenticated()" class="dropdown" appDropdown>
+          <a class="dropdown-toggle" role="button">{{ 'HEADER.MANAGE' | translate}}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a>{{ 'HEADER.MYPROFILE' | translate}}</a>
+            </li>
+            <li>
+              <a routerLink="/Patients">{{ 'HEADER.PATIENTS' | translate}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

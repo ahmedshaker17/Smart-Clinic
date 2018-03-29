@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form #newPatientForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" ngModel required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="datetime">Date of birth</label>
+                        <input type="datetime" id="dateOfBirth" name="dateOfBirth" class="form-control" ngModel required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="ChronicDiseases">Chronic Diseases</label>
+                        <input type="text" id="ChronicDiseases" rows="10" name="ChronicDiseases" class="form-control" ngModel required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="Notes">Extra Notes</label>
+                        <input type="text" id="Notes" rows="10" name="Notes" class="form-control" ngModel required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-success" type="submit" [disabled]="!newPatientForm.valid">Save</button>
+                    <button class="btn btn-danger" type="button" (click)="onCancel()" style="cursor: pointer">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

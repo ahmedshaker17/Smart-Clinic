@@ -1,0 +1,11 @@
+{
+    "HEADER": {
+        "HOME" : "Home",
+        "LOGIN" : "Login",
+        "REGISTER" : "Register",
+        "MANAGE" : "Manage",
+        "MYPROFILE" : "My Profile",
+        "LOGOUT" :"Logout",
+        "PATIENTS" : "Patients"
+    }
+}
