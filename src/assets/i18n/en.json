@@ -7,5 +7,19 @@
         "MYPROFILE" : "My Profile",
         "LOGOUT" :"Logout",
         "PATIENTS" : "Patients"
+    },
+    "LOGIN" : {
+        "EMAIL" :"Email",
+        "PASSWORD" : "Password",
+        "BTN_LOGIN" : "Login"
+    },
+    "REGISTER" : {
+        "FULLNAME" :"Full Name",
+        "EMAIL" : "email",
+        "MOBILE" : "Mobile",
+        "PASSWORD" : "Password",
+        "CONFIRMPASSWORD" : "Confirm Password",
+        "SYNDICATEID" : "Syndicate ID",
+        "BTN_REGISTER" : "Register"
     }
 }

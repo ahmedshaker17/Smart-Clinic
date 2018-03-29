@@ -7,5 +7,21 @@
         "MYPROFILE" : "حسابى",
         "LOGOUT" :"تسجيل الخروج",
         "PATIENTS" : "ملفات المرضى"
+    },
+    
+    "LOGIN" : {
+        "EMAIL" :"البريد الالكترونى",
+        "PASSWORD" : "كلمة المرور",
+        "BTN_LOGIN" : "دخول"
+    },
+    "REGISTER" : {
+        "FULLNAME" :"الاسم بالكامل",
+        "EMAIL" : "البريد الالكترونى",
+        "MOBILE" : "رقم الهاتف",
+        "PASSWORD" : "كلمة المرور",
+        "CONFIRMPASSWORD" : "تأكيد كلمة المرور",
+        "SYNDICATEID" : "صورة كارنية النقابة",
+        "BTN_REGISTER" : "تسجيل"
+
     }
 }
