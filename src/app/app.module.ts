@@ -18,6 +18,7 @@ import { PatientsModule } from './patient/patient.module';
 import { SharedModule } from './shared/shared.module';
 import { Http, HttpModule } from '@angular/http';
 import { CommonService } from './shared/common.service';
+import { FileUploaderService } from './shared/fileUploader.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { CommonService } from './shared/common.service';
       deps: [Http]
     })
   ],
-  providers: [AuthService, AuthGuard, CommonService/*{
+  providers: [AuthService, AuthGuard, CommonService,FileUploaderService/*{
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true

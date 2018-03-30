@@ -12,16 +12,26 @@
     "LOGIN" : {
         "EMAIL" :"البريد الالكترونى",
         "PASSWORD" : "كلمة المرور",
-        "BTN_LOGIN" : "دخول"
+        "BTN_LOGIN" : "دخول",
+        "VLD_EMAIL": "البريد الالكترونى مطلوب مثل",
+        "VLD_PASSWORD": "كلمة المرور مطلوبة"
     },
     "REGISTER" : {
         "FULLNAME" :"الاسم بالكامل",
+        "VLD_FULLNAME" : " اسم المستخدم مطلوب (6 احرف على الاقل)",
         "EMAIL" : "البريد الالكترونى",
+        "VLD_EMAIL": "البريد الالكترونى مطلوب مثل",
         "MOBILE" : "رقم الهاتف",
+        "VLD_MOBILE" : "رقم الهاتف مطلوب (11 رقم مطلوب)",
         "PASSWORD" : "كلمة المرور",
+        "VLD_PASSWORD" : "كلمة المرور مطلوبة (6 احرف مطلوبة)",
         "CONFIRMPASSWORD" : "تأكيد كلمة المرور",
+        "VLD_PASSWORDMISMATCH" : "كلمات السر غير متطابقة",
         "SYNDICATEID" : "صورة كارنية النقابة",
-        "BTN_REGISTER" : "تسجيل"
+        "BTN_REGISTER" : "تسجيل",
+        "GENDER" : "الجنس",
+        "FEMALE" : "انثى",
+        "MALE" :"ذكر"
 
     }
 }

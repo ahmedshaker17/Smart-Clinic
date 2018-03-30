@@ -1,25 +1,35 @@
 {
     "HEADER": {
-        "HOME" : "Home",
-        "LOGIN" : "Login",
-        "REGISTER" : "Register",
-        "MANAGE" : "Manage",
-        "MYPROFILE" : "My Profile",
-        "LOGOUT" :"Logout",
-        "PATIENTS" : "Patients"
+        "HOME": "Home",
+        "LOGIN": "Login",
+        "REGISTER": "Register",
+        "MANAGE": "Manage",
+        "MYPROFILE": "My Profile",
+        "LOGOUT": "Logout",
+        "PATIENTS": "Patients"
     },
-    "LOGIN" : {
-        "EMAIL" :"Email",
-        "PASSWORD" : "Password",
-        "BTN_LOGIN" : "Login"
+    "LOGIN": {
+        "EMAIL": "Email",
+        "PASSWORD": "Password",
+        "BTN_LOGIN": "Login",
+        "VLD_EMAIL": "Email is required and format should be",
+        "VLD_PASSWORD": "Password is required"
     },
-    "REGISTER" : {
-        "FULLNAME" :"Full Name",
-        "EMAIL" : "email",
-        "MOBILE" : "Mobile",
-        "PASSWORD" : "Password",
-        "CONFIRMPASSWORD" : "Confirm Password",
-        "SYNDICATEID" : "Syndicate ID",
-        "BTN_REGISTER" : "Register"
+    "REGISTER": {
+        "FULLNAME": "Full Name",
+        "VLD_FULLNAME" : " Username is required (minimum 6 characters).",
+        "EMAIL": "email",
+        "VLD_EMAIL" : "Email is required and format should be",
+        "MOBILE": "Mobile",
+        "VLD_MOBILE" : "Mobile is required (11 digits required)",
+        "PASSWORD": "Password",
+        "VLD_PASSWORD" : "Password is required (minimum 6 characters)",
+        "CONFIRMPASSWORD": "Confirm Password",
+        "VLD_PASSWORDMISMATCH" : "Passwords not match",
+        "SYNDICATEID": "Syndicate ID",
+        "BTN_REGISTER": "Register",
+        "GENDER" : "Gender",
+        "FEMALE" : "Female",
+        "MALE" :"Male"
     }
 }

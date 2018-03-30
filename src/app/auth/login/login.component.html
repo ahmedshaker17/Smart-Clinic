@@ -4,13 +4,14 @@
       <div class="form-group">
         <label for="email">{{ 'LOGIN.EMAIL' | translate }}</label>
         <input type="email" id="email" name="email" #email="ngModel" ngModel class="form-control" required email>
-        <span class="help-block" *ngIf="!email.valid && email.touched"> please enter valid email!</span>
+        <span class="help-block" *ngIf="!email.valid && email.touched">{{'LOGIN.VLD_EMAIL' | translate}} <i>john@doe.com</i>. </span>
 
       </div>
 
       <div class="form-group">
         <label for="password"> <label for="email">{{ 'LOGIN.PASSWORD' | translate }}</label></label>
-        <input type="password" id="password" name="password" ngModel class="form-control" required>
+        <input type="password" id="password" name="password" ngModel class="form-control" #password="ngModel" required>
+        <span class="help-block" *ngIf="!password.valid && password.touched">{{'LOGIN.VLD_PASSWORD' | translate}} <i>john@doe.com</i>. </span>
       </div>
       <button id="btnSubmit" class="btn btn-primary">{{ 'LOGIN.BTN_LOGIN' | translate }}</button>
       <span class="help-block" >{{userMessage}}</span>

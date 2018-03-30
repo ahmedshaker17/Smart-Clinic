@@ -1,10 +1,11 @@
-import { Response } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+import { Response, Http } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/Rx';
 import { Observable } from "rxjs/Observable";
 import { CustomResponse } from '../shared/CustomResponse.model';
 import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
+import { Body } from '@angular/http/src/body';
 @Injectable()
 export class AuthService {
     constructor(private httpRequest: HttpClient) {
@@ -22,7 +23,10 @@ export class AuthService {
     }
     register(params: any): Promise<CustomResponse> {
         return new Promise((resolve, reject) => {
-
+            let registerURL = `${environment.serviceUrl}/Auth/Register`;
+            let headers = new HttpHeaders();
+            headers.append('Content-Type', 'application/json');
+            this.httpRequest.post(registerURL, JSON.stringify(params), { headers: headers })
         });
     }
     public getToken(): string {
@@ -35,7 +39,7 @@ export class AuthService {
         localStorage.removeItem('AuthToken');
     }
     public isAuthenticated(): boolean {
-       // return this.getToken() !== null;
-       return false;
+        // return this.getToken() !== null;
+        return false;
     }
 }

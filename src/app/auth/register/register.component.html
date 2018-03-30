@@ -5,14 +5,22 @@
         <label for="userName">{{'REGISTER.FULLNAME' | translate }}</label>
         <input type="text" id="fullName" formControlName="fullName" class="form-control" [formGroup]="form" minlength="6">
         <small *ngIf="form.controls.fullName.invalid && form.controls.fullName.touched" class="text-danger">
-          Username is required (minimum 6 characters).
+            {{'REGISTER.VLD_FULLNAME' | translate }}
+         
         </small>
       </div>
+      <div class="form-group">
+          <label for="gender">{{'REGISTER.GENDER' | translate }}</label>
+          <select id="gender" formControlName="gender" class="form-control" [formGroup]="form">
+           <option name="male" value="0" selected>{{'REGISTER.MALE' | translate }}</option>
+           <option name="female" value="1">{{'REGISTER.FEMALE' | translate }}</option>
+          </select>
+        </div>
       <div class="form-group">
         <label for="email">{{'REGISTER.EMAIL' | translate }}</label>
         <input type="email" id="email" formControlName="email" class="form-control" [formGroup]="form" email>
         <small *ngIf="form.controls.email.invalid && form.controls.email.touched" class="text-danger">
-          Email is required and format should be
+            {{'REGISTER.VLD_EMAIL' | translate }}
           <i>john@doe.com</i>.
         </small>
       </div>
@@ -20,14 +28,14 @@
         <label for="mobile">{{'REGISTER.MOBILE' | translate }}</label>
         <input type="text" id="mobile" formControlName="mobile" class="form-control" [formGroup]="form" maxlength="11" minlength="11">
         <small *ngIf="form.controls.mobile.invalid && form.controls.mobile.touched" class="text-danger">
-          Mobile is required (11 digits required)
+           {{'REGISTER.VLD_MOBILE' | translate }}
         </small>
       </div>
       <div class="form-group">
         <label for="password">{{'REGISTER.PASSWORD' | translate }}</label>
         <input type="password" id="password" class="form-control" formControlName="password" [formGroup]="form" minlength="6">
         <small *ngIf="form.controls.password.invalid && form.controls.password.touched" class="text-danger">
-          Password is required (minimum 6 characters)
+          {{'REGISTER.VLD_PASSWORD' | translate }}
         </small>
       </div>
       <div class="form-group">
@@ -35,16 +43,16 @@
         <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" [formGroup]="form">
       </div>
       <small *ngIf="form.controls.confirmPassword.errors?.MatchPassword" class="text-danger">
-        Passwords not match
+          {{'REGISTER.VLD_PASSWORDMISMATCH' | translate }}          
       </small>
       <div class="form-group">
         <label for="SyndicateID">{{'REGISTER.SYNDICATEID' | translate }}</label>
         <input type="file" id="SyndicateID" value="Upload" (change)="fileChange($event)" class="form-control" />
-        <small class="text-info">
+        <small class="text-info" *ngIf="submitted && !SyndicateIDStatues">
           {{SyndicateIDUploaded}}
         </small>
       </div>
-      <button id="btnSubmit" class="btn btn-primary">{{ 'LOGIN.BTN_LOGIN' | translate }}</button>
+      <button id="btnSubmit" class="btn btn-primary">{{ 'REGISTER.BTN_REGISTER' | translate }}</button>
     </form>
   </div>
 </div>
