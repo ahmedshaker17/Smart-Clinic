@@ -18,7 +18,7 @@
         </div>
       <div class="form-group">
         <label for="email">{{'REGISTER.EMAIL' | translate }}</label>
-        <input type="email" id="email" formControlName="email" class="form-control" [formGroup]="form" email>
+        <input type="email" id="email" formControlName="email" class="form-control" [formGroup]="form">
         <small *ngIf="form.controls.email.invalid && form.controls.email.touched" class="text-danger">
             {{'REGISTER.VLD_EMAIL' | translate }}
           <i>john@doe.com</i>.

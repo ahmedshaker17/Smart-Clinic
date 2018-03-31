@@ -23,13 +23,7 @@ export class LoginComponent implements OnInit {
       const email = form.value.email;
       const password = form.value.password;
       this.authService.Login(email, password).then(resp => {
-        if (resp.RequestSucceeded) {
-          this.router.navigate(['./Dashboard']);
-        }
-        else {
-          this.userMessage = resp.UserMessage;
-        }
-        console.log(resp);
+        this.authService.handleProfileAccess(resp);
       }, err => {
         alert('error' + err);
       })

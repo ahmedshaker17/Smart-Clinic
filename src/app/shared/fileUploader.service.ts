@@ -1,28 +1,31 @@
 import { Injectable } from "@angular/core";
-import { CustomResponse } from "./CustomResponse.model";
+import { CustomResponse, PhysicianResponse } from "./CustomResponse.model";
 import { environment } from "../../environments/environment"
-import {  HttpClient, HttpHeaders , HttpErrorResponse} from "@angular/common/http";
+import { Http, Headers, Response } from "@angular/http";
 import { CommonService } from "./common.service";
 @Injectable()
 export class FileUploaderService {
-    constructor(private http: HttpClient , private commonSrvc : CommonService) {
+    constructor(private http: Http, private commonSrvc: CommonService) {
 
     }
-    uploadFile(fileList: FileList) : Promise<CustomResponse> {
+    uploadFile(fileList: FileList): Promise<PhysicianResponse> {
         let file: File = fileList[0];
         let formData: FormData = new FormData();
         formData.append('uploadFile', file, file.name);
-        let headers = new HttpHeaders();
-    
+        let headers = new Headers();
+
         let apiUrl1 = `${environment.serviceUrl}/FileUploader/upload`;
         return new Promise((resolve, reject) => {
-            this.http.post(apiUrl1, formData, { headers: headers }).subscribe((resp: CustomResponse) => {
+            this.http.post(apiUrl1, formData, { headers: headers }).map((resp: Response) => {
+                let srvcResp = resp.json();
+                return srvcResp;
+            }).subscribe((resp: PhysicianResponse) => {
                 resolve(resp);
-            }, (error: HttpErrorResponse) => {
+            }, (error: Error) => {
                 reject(error);
             });
         });
-}
+    }
 
-   
+
 }

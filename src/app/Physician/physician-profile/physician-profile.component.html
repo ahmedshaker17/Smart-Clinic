@@ -1,1 +1,10 @@
-<h4>Pysician Profile</h4>
+<div class="row">
+    <div class="col-xs-12">
+        <ng-template #Activated [ngIf]="authService.isAuthenticated() && authService.isActivated()">
+            <h4>Welcome on Your Profile</h4>
+        </ng-template>
+        <ng-template #Activated [ngIf]="authService.isAuthenticated() && !authService.isActivated()">
+            <h4>{{'DASHBOARD.ACCOUNT_NOT_ACTIVE' | translate}}</h4>
+        </ng-template>
+    </div>
+</div>

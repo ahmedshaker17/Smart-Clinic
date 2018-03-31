@@ -31,5 +31,11 @@
         "GENDER" : "Gender",
         "FEMALE" : "Female",
         "MALE" :"Male"
-    }
+    },
+    "DASHBOARD" :{
+        "ACCOUNT_NOT_ACTIVE" :"Your account not activated yet , it will be activated once we checked your Syndicate"
+    } ,
+    "HOME" :{
+        "LANDING_PAGE_TITLE" :"Welcome to our smart clinic system , a smart place where you can manage your patients history"
+    }   
 }

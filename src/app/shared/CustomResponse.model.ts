@@ -14,3 +14,8 @@ export class CustomResponse {
     }
 
 }
+export class PhysicianResponse extends CustomResponse {
+    public SyndicateIDImgUrl: string;
+    public PhysicianID: number;
+    public IsActivated : boolean;
+}
