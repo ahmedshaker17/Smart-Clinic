@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 //import {HttpModule} from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
-import { TokenInterceptor } from './auth/token.interceptor';
+import { AuthInterceptor } from './auth/auth.interceptor';
 import { AppRouterModule } from './app-router.module';
 import { AuthModule } from './auth/auth.module/auth.module';
 import { AuthService } from './auth/auth.service'
@@ -42,11 +42,11 @@ import { FileUploaderService } from './shared/fileUploader.service';
       deps: [Http]
     })
   ],
-  providers: [AuthService, AuthGuard, CommonService,FileUploaderService/*{
-    provide: HTTP_INTERCEPTORS,
-    useClass: TokenInterceptor,
-    multi: true
-  }*/],
+  providers: [AuthService, AuthGuard, CommonService,FileUploaderService , {
+    provide : HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi   : true,
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
